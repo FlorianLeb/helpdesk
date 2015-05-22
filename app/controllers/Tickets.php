@@ -1,6 +1,6 @@
 <?php
 /**
- * Gestion des tickets
+ * Gestion des tickets test
  * @author jcheron
  * @version 1.1
  * @package helpdesk.controllers
