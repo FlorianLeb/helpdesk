@@ -1,6 +1,6 @@
 <?php
 /**
- * Gestion des tickets test
+ * Gestion des tickets
  * @author jcheron
  * @version 1.1
  * @package helpdesk.controllers
@@ -31,6 +31,10 @@ class Tickets extends \_DefaultController {
 					  $('[data-toggle=\"popover\"]').popover({'trigger':'hover','html':true})
 				})");
 		}
+	}
+	public function frm($id=NULL){
+		$ticket=$this->getInstance($id);
+		$this->loadView("tickets/vAdd",array("ticket"=>$ticket));
 	}
 
 
