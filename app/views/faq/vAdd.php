@@ -4,13 +4,14 @@
 <div class="alert alert-info">faq : <?php echo $faq->toString()?></div>
 <div class="form-group">
 	<input type="hidden" name="id" value="<?php echo $faq->getId()?>">
-	<input type="text" name="titre" value="<?php echo $faq->getTitre()?>" placeholder="Entrez un titre" class="form-control">
-	<?php echo "<br> texte : <br />";?>
-	<textarea name="texte" class="form-control"> <?php echo $faq->getContenu() ?> </textarea><br />
+	<label for="titre">Titre :</label><br />
+	<input type="text" name="titre" value="<?php echo $faq->getTitre()?>" placeholder="Entrez un titre" class="form-control">	<br />
+	<label for="texte">Texte :</label><br />
+	<textarea name="contenu" class="form-control" placeholder="Entrez une description"></textarea>
 	<label for="datecreation">Date de création :</label><br />
-	<input class="form-control" type="text" readonly value="<?php echo $faq->getDateCreation()?>">
+	<input class="form-control" type="text" readonly value="<?php echo (new DateTime())->format('d-m-Y H:i:s'); ?>">
 	<br />
-	<label for="datecreation">Version :</label><br />
+	<label for="version">Version :</label><br />
 	<input class="form-control" type="text" readonly value="<?php echo $faq->getVersion()?>">
 	</div>
 <div class="form-group">
