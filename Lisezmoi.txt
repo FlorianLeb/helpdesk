@@ -1,0 +1,10 @@
+Antoine Piedleu
+
+Florian Lebrethon
+
+-Repartition du travail:    ???
+
+-Sur xampp lancer apache et MySQL
+sur php my admin executer le scripte helpdesk.sql 
+ensuite placé le repertoire du projet dans htdocs, 
+aller via un navigateur sur votre loopback, ouvrer le repertoire. 
