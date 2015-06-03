@@ -26,7 +26,7 @@ class Faqs extends \_DefaultController {
 			$this->loadView("faq/vAdd", array("faq" => $faq));
 			echo JsUtils::execute("CKEDITOR.replace( 'contenu');");
 		}else{
-			$this->messageDanger("Vous devez être connecté");
+			$this->messageDanger("Vous devez être connecté en tant que administrateur");
 		}
 	}
 
