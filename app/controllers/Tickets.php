@@ -32,10 +32,6 @@ class Tickets extends \_DefaultController {
 				})");
 		}
 	}
-	#public function frm($id=NULL){
-	#	$ticket=$this->getInstance($id);
-	#	$this->loadView("tickets/vAdd",array("ticket"=>$ticket));
-	#}
 
 	public function frm($id=null){
 		if(Auth::isAdmin()){
@@ -45,22 +41,11 @@ class Tickets extends \_DefaultController {
 			if ($ticket->getCategorie() != null) {
 				$cat = $ticket->getCategorie()->getId();
 			}
-			$list = Gui::select($categories, $cat, "S�lectionnez cat�gorie ...");
+			$list = Gui::select($categories, $cat, "Sélectionnez catégorie ...");
 			$this->loadView("tickets/vAdd", array("ticket" => $ticket, "listCat" => $list));
 			echo JsUtils::execute("CKEDITOR.replace( 'contenu');");
 		}else{
-			$this->nonValid();
+			$this->messageDanger("Vous devez être connecté");
 		}
-	}
-
-	public function isValid() {
-		return Auth::isAuth();
-	}
-
-	public function onInvalidControl () {
-		$this->loadView("main/vHeader", array("infoUser"=>Auth::getInfoUser()));
-		$this->nonValid();
-		$this->loadView("main/vFooter");
-		exit;
 	}
 }
