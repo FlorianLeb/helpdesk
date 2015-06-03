@@ -23,28 +23,12 @@ class Faqs extends \_DefaultController {
 	public function frm($id=null){
 		if(Auth::isAdmin()){
 			$faq = $this->getInstance($id);
-			$categories = DAO::getAll("Categorie");
-			$cat = -1;
-			if ($faq->getCategorie() != null) {
-				$cat = $faq->getCategorie()->getId();
-			}
-			$list = Gui::select($categories, $cat, "Sélectionnez catégorie ...");
-			$this->loadView("faq/vAdd", array("faq" => $faq, "listCat" => $list));
+			$this->loadView("faq/vAdd", array("faq" => $faq));
 			echo JsUtils::execute("CKEDITOR.replace( 'contenu');");
 		}else{
-			$this->nonValid();
+			$this->messageDanger("Vous devez être connecté");
 		}
 	}
 
-	public function isValid() {
-		return Auth::isAuth();
-	}
-
-	public function onInvalidControl () {
-		$this->loadView("main/vHeader", array("infoUser"=>Auth::getInfoUser()));
-		$this->nonValid();
-		$this->loadView("main/vFooter");
-		exit;
-	}
 }
 
