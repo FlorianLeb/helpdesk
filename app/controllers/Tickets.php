@@ -34,7 +34,7 @@ class Tickets extends \_DefaultController {
 	}
 
 	public function frm($id=null){
-		if(Auth::isAdmin()){
+		if(Auth::getUser()!=Null){
 			$ticket = $this->getInstance($id);
 			$categories = DAO::getAll("Categorie");
 			$cat = -1;
