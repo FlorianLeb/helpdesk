@@ -22,4 +22,4 @@ A Helpdesk Application for educational purposes using a micro-framework
   aller via un navigateur sur votre loopback, ouvrer le repertoire.
 
 -Fonctionnalités implémentées:
-Ticket et FAQ plus ou moins fonctionnels
+Ticket , FAQ et page test plus ou moins fonctionnels
