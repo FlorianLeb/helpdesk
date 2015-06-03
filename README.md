@@ -8,10 +8,13 @@ A Helpdesk Application for educational purposes using a micro-framework
 - [x] consult the micro-framework api : [documentation](http://api.kobject.net/micro-framework/)
 
 -Binome:
-  Antoine Piedleu
-  Florian Lebrethon
+  Antoine Piedleu / Florian Lebrethon
 
--Repartition du travail: ???
+-Repartition du travail:
+  -Antoine:
+    Tickets et FAQ
+  -Florain:
+    Page test
 
 -Sur xampp lancer apache et MySQL
   sur php my admin executer le scripte helpdesk.sql
